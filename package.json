@@ -4,18 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ShifaHaider/School-Megement-server.git"
+    "url": "git+https://github.com/ShifaHaider/School-Management-server.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ShifaHaider/School-Megement-server/issues"
+    "url": "https://github.com/ShifaHaider/School-Management-server/issues"
   },
-  "homepage": "https://github.com/ShifaHaider/School-Megement-server#readme",
+  "homepage": "https://github.com/ShifaHaider/School-Management-server#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
