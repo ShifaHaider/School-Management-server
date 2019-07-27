@@ -12,7 +12,6 @@ var StudentSchema = new mongoose.Schema({
     fatherName: {type: String, required: true},
     admissionDate: {type: Number, required: true},
     admittedInClass: {type: String, required: true},
-
     createdAt: {type: Number, default: Date.now},
 }, {minimize: false});
 

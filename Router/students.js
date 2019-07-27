@@ -21,6 +21,7 @@ api.post('/find-student-detail', function (req, res) {
 api.post('/add-student', function (req, res) {
     var studentModel = new StudentModel(req.body);
     studentModel.save(function (error, data) {
+        console.log(data);
         res.send(data || error);
     });
 });
@@ -40,7 +41,7 @@ api.get('/find-by-keyword', function (req, res) {
             {phone: new RegExp(req.query.keyword, 'i')},
             {address: new RegExp(req.query.keyword, 'i')},
             {fatherName: new RegExp(req.query.keyword, 'i')},
-            {studentName: new RegExp(req.query.keyword, 'i')},
+            {name: new RegExp(req.query.keyword, 'i')},
             {lastInstitution: new RegExp(req.query.keyword, 'i')},
         ]
     };
