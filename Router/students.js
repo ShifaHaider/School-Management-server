@@ -3,13 +3,11 @@ var api = express.Router();
 var schema = require('../Schema/schema');
 var StudentModel = schema.StudentModel;
 
-
 api.post('/find-student', function (req, res) {
     StudentModel.find(req.body, ((error, data) => {
         res.send(data || error);
     }));
 });
-
 
 api.post('/find-student-detail', function (req, res) {
     StudentModel.findOne({_id: req.body.studentID}, ((error, data) => {
@@ -28,6 +26,7 @@ api.post('/add-student', function (req, res) {
 
 
 api.post('/update-student-profile', function (req, res) {
+    console.log(req.body);
     StudentModel.update({_id: req.body.studentID}, (req.body.updatedData), function (error, data) {
         res.send(data || error);
     })
@@ -50,5 +49,5 @@ api.get('/find-by-keyword', function (req, res) {
     });
 });
 
-
 module.exports = api;
+
